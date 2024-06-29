@@ -1,0 +1,54 @@
+<h1><%= @teardown.new_record? ? 'New' : 'Edit' %> Teardown</h1>
+
+<%= form_with model: [@product, @teardown], local: true do |form| %>
+  <div>
+    <%= form.label :strategy, 'Strategy, Distribution, and Market' %>
+    <%= form.text_area :strategy %>
+  </div>
+
+  <div>
+    <%= form.label :playstore, 'Playstore' %>
+    <%= form.text_area :playstore %>
+  </div>
+
+  <div>
+    <%= form.label :positioning, 'Positioning' %>
+    <%= form.text_area :positioning %>
+  </div>
+
+  <div>
+    <%= form.label :onboarding, 'Onboarding' %>
+    <%= form.text_area :onboarding %>
+  </div>
+
+  <div>
+    <%= form.label :ftue, 'First Time User Experience (FTUE)' %>
+    <%= form.text_area :ftue %>
+  </div>
+
+  <div>
+    <%= form.label :jtbd, 'Jobs To Be Done (JTBD)' %>
+    <%= form.text_area :jtbd %>
+  </div>
+
+  <div>
+    <%= form.label :defensibility, 'Defensibility' %>
+    <%= form.text_area :defensibility %>
+  </div>
+
+  <div>
+    <%= form.label :trust_reliability, 'Building Trust and Reliability' %>
+    <%= form.text_area :trust_reliability %>
+  </div>
+
+  <div>
+    <%= form.label :product_design, 'Product and Design' %>
+    <%= form.text_area :product_design %>
+  </div>
+
+  <div>
+    <%= form.submit @teardown.new_record? ? 'Create Teardown' : 'Update Teardown' %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', product_path(@product) %>

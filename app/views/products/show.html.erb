@@ -1,0 +1,11 @@
+<h1><%= @product.name %></h1>
+
+<%= link_to 'New Teardown', new_product_teardown_path(@product) %>
+
+<ul>
+  <% @product.teardowns.each do |teardown| %>
+    <li>
+      <%= link_to 'Teardown', product_teardown_path(@product, teardown) %>
+    </li>
+  <% end %>
+</ul>
