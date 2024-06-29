@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: <%= ENV['POSTGRES_USERNAME'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  host: <%= ENV['POSTGRES_HOST'] %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: product_teardown_app_development
+
+test:
+  <<: *default
+  database: product_teardown_app_test
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  username: <%= ENV['POSTGRES_PRODUCTION_USERNAME'] %>
+  password: <%= ENV['POSTGRES_PRODUCTION_PASSWORD'] %>
+  host: <%= ENV['POSTGRES_PRODUCTION_HOST'] %>
+  database: product_teardown_app_production
