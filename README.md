@@ -44,28 +44,24 @@ Before you begin, ensure you have the following installed on your local machine:
 ### Installation
 
 1. Clone the repository:
-
-   ```bash
+   
    git clone https://github.com/your/repository.git
    cd ProductTeardownApp
-```
-```
-bundle install
-```
+   bundle install
 
-Database Setup
+2. Database Setup
+
 Ensure PostgreSQL is running locally.
 
 Create the development and test databases:
 
-```
 rails db:create
-```
+
 
 Run migrations to set up the database schema:
-```
+
 rails db:migrate
-```
+
 
 # Environment Variables
 Rename .env.example to .env and update the environment variables as necessary:
